@@ -1,14 +1,9 @@
 package guru.qa.SelenideTests;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.files.DownloadActions.click;
 
 public class SelenideTests {
 
@@ -35,7 +30,6 @@ public class SelenideTests {
 
         //check: внутри есть пример кода для JUnit5
         $$("h4").findBy(text("Using JUnit5 extend test class:")).sibling(0).shouldHave(text("SoftAssertsExtension.class"));
-
 
     }
 }
